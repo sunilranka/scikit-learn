@@ -6,6 +6,7 @@ def classify(features_train, labels_train):
     
     
     ### your code goes here!
+    ### Code by sranka
     
     ### import the sklearn module for GaussianNB
     from sklearn.naive_bayes import GaussianNB
