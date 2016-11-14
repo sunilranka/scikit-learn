@@ -41,15 +41,22 @@ DTPrecision = precision(y_test,clf1.predict(X_test))
 
 print "Decision Tree recall: {:.2f} and precision: {:.2f}".format(recall(y,clf1.predict(X)),precision(y,clf1.predict(X)))
 
+
 clf2 = GaussianNB()
 clf2.fit(X, y)
 print "GaussianNB recall: {:.2f} and precision: {:.2f}".format(recall(y,clf2.predict(X)),precision(y,clf2.predict(X)))
 
+print "------- **** -----"
+print "Decision Tree recall: {:.2f} and precision: {:.2f}".format(recall(y_test,clf1.predict(X_test)),precision(y_test,clf1.predict(X_test)))
+print "GaussianNB recall: {:.2f} and precision: {:.2f}".format(recall(y_test,clf2.predict(X_test)),precision(y_test,clf2.predict(X_test)))
+
 # Assigning a variable to Naive Bayes Recall
-NBRecall = recall(y,clf2.predict(X))
+#NBRecall = recall(y,clf2.predict(X))
+NBRecall = recall(y_test,clf2.predict(X_test))
 
 # Assigning a variable to Naive Bayes Precision
-NBPrecision = precision(y,clf2.predict(X))
+#NBPrecision = precision(y,clf2.predict(X))
+NBPrecision = precision(y_test,clf2.predict(X_test))
 
 
 results = {
@@ -58,3 +65,6 @@ results = {
   "Decision Tree Recall": DTRecall,
   "Decision Tree Precision": DTPrecision
 }
+
+# Naive Bayes seems to do pretty well on precision, but rather poorly on recall!
+
