@@ -25,6 +25,8 @@ labels = iris.target
 ### set the random_state to 0 and the test_size to 0.4 so
 ### we can exactly check your result
 
+### Added by sranka
+
 from sklearn import cross_validation
 features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(
     iris.data, iris.target, test_size=0.4, random_state=0
